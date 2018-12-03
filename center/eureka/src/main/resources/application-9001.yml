@@ -1,0 +1,11 @@
+server:
+  port: 9001
+eureka:
+  client:
+    # Eureka服务注册中心会将自己作为客户端来尝试注册它自己，必須禁止
+    register-with-eureka: false #是否将自己注册到Eureka Server上，默认为true
+    fetch-registry: false #是否从Eureka Server上获取注册信息，默认为true
+    service-url:
+      defaultZone: http://localhost:9002/eureka
+  server:
+    enable-self-preservation: false

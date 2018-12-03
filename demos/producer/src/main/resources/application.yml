@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: producer-service
+  profiles:
+    active: 10001 # 這里指定启动的application-10001/10002.yml
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka,http://localhost:9002/eureka
+feign:
+  hystrix:
+    enabled: true

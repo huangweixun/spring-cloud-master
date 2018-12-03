@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cloud.authenticationserver.dao.ResourceMapper">
+
+
+    <select id="findAll" resultMap="ResourceMap">
+        SELECT
+            *
+        FROM
+            resources
+    </select>
+    <select id="queryByRoleCodes" resultMap="ResourceMap">
+
+        SELECT DISTINCT rs.code,rs.url,rs.name,rs.type,rs.method,rs.description
+         FROM roles r
+         INNER JOIN roles_resources_relation rrr ON r.id = rrr.role_id
+         INNER JOIN resources rs ON rs.id = rrr.resource_id
+         WHERE r.code IN
+         <foreach collection='roleCodes' item='roleCode' index='index' open='(' close=')' separator=',' > +
+                #{roleCode}
+         </foreach>
+    </select>
+
+    <resultMap type="com.cloud.authenticationserver.entity.Resource" id="ResourceMap">
+        <result property="code" column="code"/>
+        <result property="name" column="name"/>
+        <result property="type" column="type"/>
+        <result property="url" column="url"/>
+        <result property="method" column="method"/>
+        <result property="description" column="description"/>
+    </resultMap>
+
+</mapper>

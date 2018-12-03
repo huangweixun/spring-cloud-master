@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: gateway-server
+  profiles:
+    active: 9301
+##是否与服务发现组件进行结合，通过 serviceId 转发到具体的服务实例。默认为false，设为true便开启通过服务中心的自动根据 serviceId 创建路由的功能。
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+      routes:
+      - id: ORDER-SERVICE           #网关路由到订单服务order-service
+      #uri以lb://开头（lb代表从注册中心获取服务），后面接的就是你需要转发到的服务名称，这个服务名称必须跟eureka中的对应
+        uri: lb://PRODUCER-SERVICE/producer
+        predicates:
+          - Path=/producer/**
+      - id: authorization-server
+        uri: lb://authorization-server/oauth
+        predicates:
+        - Path=/oauth/**
+        filters:
+        - AddResponseHeader=foo, bar
+        - name: Retry
+          args:
+            retries: 3
+            statuses: BAD_GATEWAY
+#指定注册中心的地址，Spring Cloud Gateway从注册中心获取已经注册的服务列表。
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka,http://localhost:9002/eureka
+
+#网关白名单，无需要签权url
+gate:
+  ignore:
+    authentication:
+      startWith: /oauth,/open
+
+

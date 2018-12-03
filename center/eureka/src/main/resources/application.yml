@@ -1,5 +1,5 @@
 spring:
   application:
-    name: study-eureka-server
+    name: eureka-server
   profiles:
-    active: 8081 # 這里指定启动的application-8081/8082.yml
+    active: 9001 # 這里指定启动的application-9001/9002.yml
