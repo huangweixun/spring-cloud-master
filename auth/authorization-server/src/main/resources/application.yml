@@ -8,7 +8,7 @@ eureka:
 
 spring:
   application:
-    name: authentication-server
+    name: authorization-server
 
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
