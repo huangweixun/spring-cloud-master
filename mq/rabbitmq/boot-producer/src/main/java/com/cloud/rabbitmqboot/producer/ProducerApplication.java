@@ -1,12 +1,12 @@
-package com.cloud.mq;
+package com.cloud.rabbitmqboot.producer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MqApplication {
+public class ProducerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MqApplication.class, args);
+        SpringApplication.run(ProducerApplication.class, args);
     }
 }

@@ -1,0 +1,14 @@
+spring:
+  rabbitmq:
+    addresses:  134.175.52.58
+    username: root
+    password: root
+    virtual-host: /
+    connection-timeout: 150000
+    publisher-confirms: true
+    publisher-returns: true
+    template:
+      mandatory: true
+    listener:
+      simple:
+        acknowledge-mode: manual
