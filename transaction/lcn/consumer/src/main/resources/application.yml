@@ -1,0 +1,28 @@
+server:
+  port: 8041
+spring:
+  datasource:
+    url: jdbc:p6spy:mysql://134.175.52.58:3306/spring-cloud?characterEncoding=UTF-8
+    password: root
+    username: root
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+#    driver-class-name: com.mysql.jdbc.Driver
+  application:
+    name: lcn-consumer
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka/
+
+logging:
+  level:
+    com:
+      lcn:
+        consumer:
+          mapper: debug

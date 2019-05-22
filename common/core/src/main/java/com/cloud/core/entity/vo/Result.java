@@ -2,6 +2,7 @@ package com.cloud.core.entity.vo;
 
 import com.cloud.core.exception.BaseException;
 import com.cloud.core.exception.ErrorType;
+import com.cloud.core.exception.SystemErrorType;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.annotations.ApiModel;
@@ -89,7 +90,7 @@ public class Result<T> {
      * @return Result
      */
     public static Result fail() {
-        return new Result(ErrorType.SYSTEM_ERROR);
+        return new Result(SystemErrorType.SYSTEM_ERROR);
     }
 
     /**
@@ -140,7 +141,7 @@ public class Result<T> {
      * @return Result
      */
     public static Result fail(Object data) {
-        return new Result<>(ErrorType.SYSTEM_ERROR, data);
+        return new Result<>(SystemErrorType.SYSTEM_ERROR, data);
     }
 
 

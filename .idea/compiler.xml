@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="auth" />
+        <module name="authentication-client" />
+        <module name="authentication-server" />
+        <module name="authorization-server" />
+        <module name="center" />
+        <module name="cloud-gateway" />
+        <module name="common" />
+        <module name="consumer" />
+        <module name="consumer (1) (com.cloud)" />
+        <module name="core" />
+        <module name="demos" />
+        <module name="eureka-server" />
+        <module name="gateway" />
+        <module name="lcn" />
+        <module name="producer" />
+        <module name="producer (1) (com.cloud)" />
+        <module name="transaction" />
+        <module name="txlcn-tm" />
+        <module name="web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="auth" target="1.8" />
+      <module name="authentication-client" target="1.8" />
+      <module name="authentication-server" target="1.8" />
+      <module name="authorization-server" target="1.8" />
+      <module name="center" target="1.8" />
+      <module name="cloud-gateway" target="1.8" />
+      <module name="common" target="1.8" />
+      <module name="consumer" target="1.8" />
+      <module name="consumer (1) (com.cloud)" target="1.8" />
+      <module name="core" target="1.8" />
+      <module name="demos" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="gateway" target="1.8" />
+      <module name="lcn" target="1.8" />
+      <module name="manager" target="1.8" />
+      <module name="producer" target="1.8" />
+      <module name="producer (1) (com.cloud)" target="1.8" />
+      <module name="spring-cloud-master" target="1.8" />
+      <module name="transaction" target="1.8" />
+      <module name="txlcn-tm" target="1.8" />
+      <module name="web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="auth" options="-parameters" />
+      <module name="authentication-client" options="-parameters" />
+      <module name="authentication-server" options="-parameters" />
+      <module name="authorization-server" options="-parameters" />
+      <module name="center" options="-parameters" />
+      <module name="cloud-gateway" options="-parameters" />
+      <module name="common" options="-parameters" />
+      <module name="consumer" options="-parameters" />
+      <module name="consumer (1) (com.cloud)" options="-parameters" />
+      <module name="core" options="-parameters" />
+      <module name="demos" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="lcn" options="-parameters" />
+      <module name="manager" options="-parameters" />
+      <module name="producer" options="-parameters" />
+      <module name="producer (1) (com.cloud)" options="-parameters" />
+      <module name="transaction" options="-parameters" />
+      <module name="txlcn-tm" options="-parameters -Xlint:deprecation" />
+      <module name="web" options="-parameters" />
+    </option>
+  </component>
+</project>
