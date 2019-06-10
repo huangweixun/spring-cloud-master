@@ -19,6 +19,8 @@
         <option value="$PROJECT_DIR$/demos/pom.xml" />
         <option value="$PROJECT_DIR$/transaction/lcn/manager/pom.xml" />
         <option value="$PROJECT_DIR$/transaction/lcn/tx-lcn-master/txlcn-tm/pom.xml" />
+        <option value="$PROJECT_DIR$/schedule/pom.xml" />
+        <option value="$PROJECT_DIR$/schedule/quartz/pom.xml" />
       </list>
     </option>
   </component>

@@ -45,6 +45,8 @@
       <module name="manager" target="1.8" />
       <module name="producer" target="1.8" />
       <module name="producer (1) (com.cloud)" target="1.8" />
+      <module name="quartz" target="1.8" />
+      <module name="schedule" target="1.8" />
       <module name="spring-cloud-master" target="1.8" />
       <module name="transaction" target="1.8" />
       <module name="txlcn-tm" target="1.8" />
@@ -70,6 +72,8 @@
       <module name="manager" options="-parameters" />
       <module name="producer" options="-parameters" />
       <module name="producer (1) (com.cloud)" options="-parameters" />
+      <module name="quartz" options="-parameters" />
+      <module name="schedule" options="-parameters" />
       <module name="transaction" options="-parameters" />
       <module name="txlcn-tm" options="-parameters -Xlint:deprecation" />
       <module name="web" options="-parameters" />

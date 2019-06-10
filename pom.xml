@@ -24,6 +24,7 @@
         <module>gateway</module>
         <module>auth</module>
         <module>transaction</module>
+        <module>schedule</module>
     </modules>
 
     <dependencyManagement>

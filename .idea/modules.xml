@@ -18,6 +18,8 @@
       <module fileurl="file://$PROJECT_DIR$/transaction/lcn/lcn.iml" filepath="$PROJECT_DIR$/transaction/lcn/lcn.iml" />
       <module fileurl="file://$PROJECT_DIR$/transaction/lcn/producer/producer.iml" filepath="$PROJECT_DIR$/transaction/lcn/producer/producer.iml" />
       <module fileurl="file://$PROJECT_DIR$/demos/producer/producer (1) (com.cloud).iml" filepath="$PROJECT_DIR$/demos/producer/producer (1) (com.cloud).iml" />
+      <module fileurl="file://$PROJECT_DIR$/schedule/quartz/quartz.iml" filepath="$PROJECT_DIR$/schedule/quartz/quartz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/schedule/schedule.iml" filepath="$PROJECT_DIR$/schedule/schedule.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring-cloud-master.iml" filepath="$PROJECT_DIR$/.idea/spring-cloud-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/transaction/transaction.iml" filepath="$PROJECT_DIR$/transaction/transaction.iml" />
       <module fileurl="file://$PROJECT_DIR$/transaction/lcn/tx-lcn-master/txlcn-tm/txlcn-tm.iml" filepath="$PROJECT_DIR$/transaction/lcn/tx-lcn-master/txlcn-tm/txlcn-tm.iml" />
