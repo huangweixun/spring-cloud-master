@@ -47,11 +47,6 @@
     </properties>
 
     <dependencies>
-        <!--&lt;!&ndash;自省和监控的集成功能&ndash;&gt;-->
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.boot</groupId>-->
-        <!--<artifactId>spring-boot-starter-actuator</artifactId>-->
-        <!--</dependency>-->
         <!--注册中心-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -62,28 +57,6 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
-        <!--&lt;!&ndash;集群监控消息队列&ndash;&gt;-->
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.cloud</groupId>-->
-        <!--<artifactId>spring-cloud-netflix-hystrix-stream</artifactId>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash;日志跟踪&ndash;&gt;-->
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.cloud</groupId>-->
-        <!--<artifactId>spring-cloud-starter-zipkin</artifactId>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash;消息总线&ndash;&gt;-->
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.cloud</groupId>-->
-        <!--<artifactId>spring-cloud-starter-bus-amqp</artifactId>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash;热加载&ndash;&gt;-->
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.boot</groupId>-->
-        <!--<artifactId>spring-boot-devtools</artifactId>-->
-        <!--<scope>runtime</scope>-->
-        <!--<optional>true</optional>-->
-        <!--</dependency>-->
 
         <!--使用 lombok 简化 Java 代码-->
         <dependency>
