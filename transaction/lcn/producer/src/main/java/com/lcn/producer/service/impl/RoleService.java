@@ -16,7 +16,7 @@ public class RoleService implements IRoleService {
     private RoleMapper roleMapper;
 
     @Override
-    @LcnTransaction
+//    @LcnTransaction
     public void add(Role role) {
         log.info("调用RoleService.add");
         roleMapper.insert(role);

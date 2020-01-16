@@ -16,7 +16,7 @@ public class RabbitController {
     @GetMapping("/send")
     public void sendMsg() throws Exception {
         String msg = "测试消息传输";
-        rabbitSender.send(msg, new HashMap<>());
+        rabbitSender.sendDeadQueue(msg);
     }
 
 }

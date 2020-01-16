@@ -21,7 +21,7 @@ public class RoleController {
     @Autowired
     private RoleService userService;
 
-    @PostMapping("add")
+    @PostMapping("/add")
     public Result add(@Valid @RequestBody RoleAddForm roleAddForm) {
         log.info("name:{}", roleAddForm);
         userService.add(roleAddForm.toPo(Role.class));

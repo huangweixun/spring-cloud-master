@@ -1,8 +1,10 @@
+server:
+  port: 9081
 spring:
   rabbitmq:
     addresses:  134.175.52.58
-    username: root
-    password: root
+    username: guest
+    password: guest
     virtual-host: /
     connection-timeout: 150000
     publisher-confirms: true
@@ -12,3 +14,8 @@ spring:
     listener:
       simple:
         acknowledge-mode: manual
+        default-requeue-rejected: false
+        retry:
+          enabled: true
+          max-attempts: 3
+          initial-interval: 1000

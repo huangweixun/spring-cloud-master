@@ -1,8 +1,10 @@
+server:
+  port: 9080
 spring:
   rabbitmq:
     addresses:  134.175.52.58
-    username: root
-    password: root
+    username: guest
+    password: guest
     virtual-host: /
     connection-timeout: 150000
     publisher-confirms: true

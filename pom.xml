@@ -25,6 +25,7 @@
         <module>auth</module>
         <module>transaction</module>
         <module>schedule</module>
+        <module>pattern</module>
     </modules>
 
     <dependencyManagement>

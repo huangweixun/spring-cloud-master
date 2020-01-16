@@ -41,17 +41,22 @@ public class RabbitSender {
 				+ routingKey + ", replyCode: " + replyCode + ", replyText: " + replyText);
 		}
 	};
-	
-	//发送消息方法调用: 构建Message消息
-	public void send(Object message, Map<String, Object> properties) throws Exception {
-		MessageHeaders mhs = new MessageHeaders(properties);
-		Message msg = MessageBuilder.createMessage(message, mhs);
+
+	/**
+	 * 	使用死信队列完成延迟消息
+	 */
+	public void sendDeadQueue(Object message) throws Exception {
 		rabbitTemplate.setMandatory(true);
 		rabbitTemplate.setConfirmCallback(confirmCallback);
 		rabbitTemplate.setReturnCallback(returnCallback);
+		rabbitTemplate.setReceiveTimeout(1000);
 		//id + 时间戳 全局唯一 
 		CorrelationData correlationData = new CorrelationData("1234567890");
-		rabbitTemplate.convertAndSend("test.topic", "user.abc", msg, correlationData);
+		rabbitTemplate.convertAndSend("dead-letter-exchange","dlx-routing-key",message,msg -> {
+					msg.getMessageProperties().setExpiration(String.valueOf(3000));
+					return msg;
+				},
+				correlationData);
 	}
 	
 	//发送消息方法调用: 构建自定义对象消息
